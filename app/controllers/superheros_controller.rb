@@ -6,6 +6,7 @@ class SuperherosController < ApplicationController
   end
 
   def show
+    @superhero = Superhero.find(params(:id))
   end
 
   def new
@@ -18,6 +19,7 @@ class SuperherosController < ApplicationController
       redirect_to superhero_path(@superhero)
     else
       render :new
+    end
   end
 
   def set_supehero
