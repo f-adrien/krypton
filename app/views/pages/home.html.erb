@@ -1,9 +1,19 @@
-<h1>Find your SuperHero !</h1>
-<div class="container">
-  <% @superheros.each do |hero| %>
-  <%= hero.name %>
-  <%= hero.superpower %>
-  <p><%= hero.price_per_day %> €</p>
-  <% end %>
-</div>
+ <div class="banner-krypton" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path 'banner-background.jpg' %>)">
+    <h1>hello</h1>
+    <h1>Find your SuperHero !</h1>
+
+ </div>
+    <div class="container">
+      <div class="cards-superheroes">
+        <% @superheros.each do |hero| %>
+          <div class="cards-superheroes">
+              <p> <%= hero.name %></p>
+            <p><%= hero.price_per_day %> €</p>
+            <p><%= hero.superpower %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+
 
