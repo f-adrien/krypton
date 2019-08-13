@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "adding a hero"
+1.times do
+  @superhero = Superhero.new({ name: "Batman", superpower: "intelligence", location: "Gotham city", price_per_day: 1000 })
+  @superhero.save
+end
+puts "hero added !"

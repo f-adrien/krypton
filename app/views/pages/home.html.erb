@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Find your SuperHero !</h1>
+<div class="container">
+  <% @superheros.each do |hero| %>
+  <%= hero.name %>
+  <%= hero.superpower %>
+  <%= hero.price_per_day '€' %>
+  <% end %>
+</div>
+
