@@ -3,7 +3,7 @@
   <% @superheros.each do |hero| %>
   <%= hero.name %>
   <%= hero.superpower %>
-  <%= hero.price_per_day '€' %>
+  <p><%= hero.price_per_day %> €</p>
   <% end %>
 </div>
 
