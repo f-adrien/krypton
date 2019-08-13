@@ -20,6 +20,7 @@ class SuperherosController < ApplicationController
     else
       render :new
     end
+    raise
   end
 
   def set_supehero
