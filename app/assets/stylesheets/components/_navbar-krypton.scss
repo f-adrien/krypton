@@ -1,0 +1,27 @@
+.navbar-krypton {
+color: white;
+background: gray;
+padding: 10px;
+top: 0;
+position: sticky;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0;
+}
+
+.navbar-krypton-logo {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.navbar-right-content ul {
+  margin: 0;
+  li {
+    margin-left: 15px;
+  }
+
+}
+
+
