@@ -1,2 +1,10 @@
-<h1>Superheros#new</h1>
-<p>Find me in app/views/superheros/new.html.erb</p>
+<h1>Add your SuperHero !</h1>
+<div class="container">
+  <%= simple_form_for [@user, @superhero] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :superpower %>
+  <%= f.input :price_per_day %>
+  <%= f.submit "Add this SuperHero" %>
+  <% end %>
+</div>
