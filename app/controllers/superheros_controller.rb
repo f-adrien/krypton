@@ -6,7 +6,6 @@ class SuperherosController < ApplicationController
   end
 
   def show
-    @superhero = Superhero.find(params(:id))
   end
 
   def new
@@ -15,11 +14,13 @@ class SuperherosController < ApplicationController
 
   def create
     @superhero = Superhero.new(superhero_params)
-    if @superhero.save
+    @superhero.user = current_user
+    if @superhero.save!
       redirect_to superhero_path(@superhero)
     else
       render :new
     end
+    raise
   end
 
   def set_supehero
