@@ -3,20 +3,20 @@
   <a class="button-krypton" href="#">BOOK YOUR SUPERHERO</a>
 
  </div>
-    <div class="container">
-      <br>
-      <p><strong>MEET THEM</strong></p>
-      <div class="cards-superheroes">
-        <% @superheros.each do |hero| %>
-          <div class="card-superhero">
-            <%= image_tag 'Iron-Man-Pics-Wallpapers-006.jpg' %>
-            <div class="card-superhero-content">
-              <h5 class="green-color"> <%= hero.name %></h5 class="green-color">
-              <p>Price per day: <%= hero.price_per_day %> €</p>
-              <p> Review: <span class=green-color>★★★★★</span></p>
-              <p>Superpower: <%= hero.superpower %></p>
-            </div>
-          </div>
-        <% end %>
+ <div class="container">
+  <br>
+  <p><strong>MEET THEM</strong></p>
+  <div class="cards-superheroes">
+    <% @superheros.each do |hero| %>
+    <div class="card-superhero">
+      <%= image_tag 'Iron-Man-Pics-Wallpapers-006.jpg' %>
+      <div class="card-superhero-content">
+        <h5 class="green-color"> <%= hero.name %></h5>
+        <p>Price per day: <%= hero.price_per_day %> €</p>
+        <p> Review: <span class=green-color>★★★★★</span></p>
+        <p>Superpower: <%= hero.superpower %></p>
       </div>
     </div>
+    <% end %>
+  </div>
+</div>
