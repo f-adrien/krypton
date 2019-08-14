@@ -27,3 +27,22 @@
   }
 }
 
+.button-krypton-ghost {
+  background-color: black;
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  padding: 15px 20px !important;
+  border-radius: 5px !important;
+  border: 0 !important;
+  border: 1px white solid !important;
+  width: 100%;
+  margin-top: 10px;
+  &:hover.button-krypton-ghost {
+    background-color: #00ff59 !important;
+    text-decoration: none !important;
+    color: white !important;
+    border: 1px #00ff59 solid !important;
+  }
+
+}

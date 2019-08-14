@@ -1,2 +1,19 @@
-<h1>Superheros#index</h1>
-<p>Find me in app/views/superheros/index.html.erb</p>
+  <div class="container">
+    <br>
+    <p><strong>CHOOSE YOUR SUPERHERO !</strong></p>
+    <div class="cards-superheroes">
+      <% @superheros.each do |hero| %>
+      <div class="card-superhero">
+        <%= image_tag 'Iron-Man-Pics-Wallpapers-006.jpg' %>
+        <div class="card-superhero-content">
+          <h5 class="green-color"> <%= hero.name %></h5>
+          <p>Price per day: <%= hero.price_per_day %> €</p>
+          <p> Review: <span class=green-color>★★★★★</span></p>
+          <p>Superpower: <%= hero.superpower %></p>
+          <%= link_to 'BOOK', superhero_path(hero), class: 'btn button-krypton-ghost' %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
