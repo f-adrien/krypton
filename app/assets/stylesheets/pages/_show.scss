@@ -1,0 +1,19 @@
+.h1-show {
+  font-weight: bold;
+  font-size: 98px;
+  line-height: 116px;
+  margin-left: 300px;
+}
+
+.show-descrption {
+  display: flex;
+ /* justify-content: space-between;*/
+}
+
+.show-details {
+  flex: 0 0 50%;
+}
+
+.booking-form {
+  flex: 0 0 50% !important;
+}

@@ -1,2 +1,16 @@
-<h1>Superheros#show</h1>
-<p>  </p>
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path 'Iron-Man-Pics-Wallpapers-006.jpg' %>)">
+  <h1 class="h1-show"><%= @superhero.name %></h1>
+</div>
+<div class="container show-description">
+  <div class="show-details">
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident, id. Deleniti mollitia provident ea fugiat doloribus cum officia ab ducimus hic ipsa possimus tempore eius molestias dolore dolorem, aspernatur. </p>
+  </div>
+  <div class="booking-form">
+    <%= simple_form_for @superhero do |f|%>
+    <%= f.input :name %>
+    <%= f.input :location %>
+    <%= f.input :price_per_day %>
+    <%= f.submit "Book your superhero", class: "button-krypton"%>
+    <% end %>
+  </div>
+</div>
