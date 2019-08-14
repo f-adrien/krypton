@@ -1,5 +1,5 @@
 class SuperherosController < ApplicationController
-  before_action :set_supehero, only: [:show]
+  before_action :set_superhero, only: [:show]
 
   def index
     @superheros = Superhero.all
@@ -22,7 +22,7 @@ class SuperherosController < ApplicationController
     end
   end
 
-  def set_supehero
+  def set_superhero
     @superhero = Superhero.find(params[:id])
   end
 
