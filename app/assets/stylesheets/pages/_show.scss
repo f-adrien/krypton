@@ -7,23 +7,17 @@
 
 .show-description {
   margin-top: 30px;
-  display: flex;
   // text-align: center;
-  & p {
-    font-size: 29px;
-  }
 }
 
 .booking-form {
   background-color: white;
   padding: 10px;
-  border-radius: 10px;
-  & h2 {
-    color: black;
-    font-weight: bold;
-  }
+  border-radius: 5px;
 }
-
+  // input {
+  //   border: black 1px solid;
 .simple_form_input {
-  border-radius: 5px !important;
+  border-radius: 15px !important;
+  border: black 1px solid !important;
 }
