@@ -8,9 +8,9 @@
     </div>
     <div class="booking-form col-sm-12 col-lg-5 ">
       <%= simple_form_for @superhero do |f|%>
-      <%= f.input :name %>
-      <%= f.input :location %>
-      <%= f.input :price_per_day %>
+      <%= f.input :name, html: {class: "simple_form_input"} %>
+      <%= f.input :location, class: "simple_form_input" %>
+      <%= f.input :price_per_day, class: "simple_form_input" %>
       <%= f.submit "Book your superhero", class: "button-krypton"%>
       <% end %>
     </div>
