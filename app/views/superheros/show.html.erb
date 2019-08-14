@@ -1,4 +1,4 @@
-<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path 'Iron-Man-Pics-Wallpapers-006.jpg' %>)">
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= image_path @superhero.photo, weight:200, width: 200, crop: :fill %>)">
   <h1 class="h1-show"><%= @superhero.name %></h1>
 </div>
 <div class="container show-description">
