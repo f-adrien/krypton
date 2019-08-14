@@ -27,7 +27,7 @@
     <div class="cards-superheroes">
       <% @superheros.each do |hero| %>
       <div class="card-superhero">
-        <%= image_tag 'Iron-Man-Pics-Wallpapers-006.jpg' %>
+        <%= cl_image_tag hero.photo %>
         <div class="card-superhero-content">
           <h5 class="green-color"> <%= hero.name %></h5>
           <p>Price per day: <%= hero.price_per_day %> €</p>
@@ -36,6 +36,5 @@
         </div>
       </div>
       <% end %>
-      <a class="button-krypton" href="#">BOOK YOUR SUPERHERO</a>
     </div>
   </div>
