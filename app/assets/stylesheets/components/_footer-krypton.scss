@@ -1,0 +1,53 @@
+.flexbox-krypton-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-size: cover;
+  height: 200px;
+  align-items: center;
+  h5 {
+    font-weight: bold;
+  }
+}
+
+.left-content-footer {
+  a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: 30px;
+    transition: 1000ms ease;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #00ff59;
+  }
+}
+
+
+.middle-content-footer {
+  a {
+    text-decoration: none;
+    color: white;
+    transition: 1000ms ease;
+    font-size: 15px;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #00ff59;
+  }
+}
+
+
+.right-content-footer {
+  a {
+    text-decoration: none;
+    color: white;
+    transition: 1000ms ease;
+    font-size: 15px;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #00ff59;
+  }
+}
