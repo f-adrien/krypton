@@ -1,22 +1,41 @@
  <div class="banner-krypton" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path 'banner-background.jpg' %>)">
 
-  <a class="button-krypton" href="#">BOOK YOUR SUPERHERO</a>
+  <div class="container">
+    <form class="banner-form">
+      <h3 style="font-weight: bold">Book superheroes to stay and do things with.</h3 style="font-weight: bold">
+        <div class="form-group">
+          <label for="exampleInputEmail1">WHERE</label>
+          <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" >
 
- </div>
- <div class="container">
-  <br>
-  <p><strong>MEET THEM</strong></p>
-  <div class="cards-superheroes">
-    <% @superheros.each do |hero| %>
-    <div class="card-superhero">
-      <%= image_tag 'Iron-Man-Pics-Wallpapers-006.jpg' %>
-      <div class="card-superhero-content">
-        <h5 class="green-color"> <%= hero.name %></h5>
-        <p>Price per day: <%= hero.price_per_day %> €</p>
-        <p> Review: <span class=green-color>★★★★★</span></p>
-        <p>Superpower: <%= hero.superpower %></p>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">WHEN</label>
+          <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">SUPERPOWERS</label>
+          <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" >
+        </div>
+        <button type="submit" class="button-krypton ">BOOK YOUR SUPERHERO</button>
       </div>
-    </div>
-    <% end %>
+    </form>
   </div>
-</div>
+
+  <div class="container">
+    <br>
+    <p><strong>MEET THEM</strong></p>
+    <div class="cards-superheroes">
+      <% @superheros.each do |hero| %>
+      <div class="card-superhero">
+        <%= image_tag 'Iron-Man-Pics-Wallpapers-006.jpg' %>
+        <div class="card-superhero-content">
+          <h5 class="green-color"> <%= hero.name %></h5>
+          <p>Price per day: <%= hero.price_per_day %> €</p>
+          <p> Review: <span class=green-color>★★★★★</span></p>
+          <p>Superpower: <%= hero.superpower %></p>
+        </div>
+      </div>
+      <% end %>
+      <a class="button-krypton" href="#">BOOK YOUR SUPERHERO</a>
+    </div>
+  </div>

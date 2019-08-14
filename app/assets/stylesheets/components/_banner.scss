@@ -1,7 +1,7 @@
   .banner-krypton {
     background-size: cover;
     background-position: center;
-    min-height: calc(100vh - 40px);
+    min-height: calc(100vh - 60px);
   }
 
   .banner-show {
@@ -10,3 +10,23 @@
     min-height: 70vh;
     border-bottom: 1px solid white;
   }
+
+.banner-form {
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px;
+  color: black;
+  width: 400px;
+  margin-top: 50px;
+  // height: 80vh;
+  .button-krypton {
+  line-height: 30px;
+  width: 100%;
+  margin-top: 20px;
+  }
+}
+
+.form-control {
+  border: black solid 1px;
+  height: 50px;
+}
