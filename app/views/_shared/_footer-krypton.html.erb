@@ -1,0 +1,34 @@
+
+<div class="flexbox-krypton-footer" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path 'banner-background.jpg' %>)">
+  <div class="left-content-footer">
+  <h5>Follow us</h5>
+    <ul class="list-group list-group-horizontal list-inline">
+      <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+      <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+      <li><a href="#"><i class="fab fa-snapchat"></i></a></li>
+    </ul>
+    <ul class="list-group list-group-horizontal list-inline">
+      <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-whatsapp-square"></i></a></li>
+    </ul>
+  </div>
+
+  <div class="middle-content-footer">
+    <h5>Navigate</h5>
+      <ul class="list-inline">
+        <li><%= link_to 'Home', root_path  %></li>
+        <li><%= link_to 'Search', root_path   %></li>
+        <li><%= link_to 'Log in', new_user_session_path %></li>
+      </ul>
+  </div>
+
+  <div class="right-content-footer">
+    <h5>Contact us</h5>
+    <ul class="list-inline">
+      <li><%= link_to 'Email', root_path  %></li>
+      <li><%= link_to 'Phone', root_path   %></li>
+    </ul>
+  </div>
+</div>
+
