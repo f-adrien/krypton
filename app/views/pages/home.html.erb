@@ -32,12 +32,8 @@
             placeholder: "Find a location",
             class: "form-control"
           %>
-
-          <select class="select2" name="country" multiple="multiple">
-            <% Superhero::POWERS.map do |power| %>
-              <option value="<%= power %>"><%= power %></option>
-            <% end %>
-          </select>
+       <!--    <%#= select_date Date.today, order: [:day, :month, :year], prefix: :start_date, class: "simple_form_input"%>
+          <%#= select_date Date.today, order: [:day, :month, :year], prefix: :end_date, class: "simple_form_input" %> -->
         <% end %>
       </div>
     </div>
