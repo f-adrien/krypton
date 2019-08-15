@@ -2,7 +2,17 @@ class SuperherosController < ApplicationController
   before_action :set_superhero, only: [:show]
 
   def index
-    @superheros = Superhero.all
+    if params[:location].present?
+      @superheros_coordinates = Superhero.geocoded
+      @markers = @superheros_coordinates.map do |superhero|
+        {
+          lat: superhero.latitude,
+          lng: superhero.longitude
+        }
+      end
+    else
+      @superheros = Superhero.all
+    end
   end
 
   def show
