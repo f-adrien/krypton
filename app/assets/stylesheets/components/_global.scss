@@ -3,6 +3,13 @@ body {
   background-color: black;
 }
 
+body.new-superhero-bg {
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), image-url("newbackgroud.jpg");
+  background-size: cover;
+
+
+}
+
 .container {
  margin: 0, auto;
 }
