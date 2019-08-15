@@ -1,0 +1,73 @@
+
+<div class="banner-index-bookings">
+
+  <h1>DASHBOARD</h1>
+</div>
+
+<div class="flexbox-cards-krypton">
+
+  <div class="cards-krypton-booking">
+    <h4 id="tags-bookings"><i class="fas fa-arrow-up"></i> LENDINGS</h4>
+    <% @incoming_bookings.each do |inbooking| %>
+    <div class="card-krypton-booking">
+
+      <div class="card-krypton-booking-img">
+        <%= cl_image_tag inbooking.superhero.photo %>
+        <h1><%= (inbooking.superhero.name).upcase %></h1>
+      </div>
+
+      <div class="card-content">
+        <div class="card-upper-content">
+          <p>Start date: <%= inbooking.start_date %></p>
+          <p>End date: <%= inbooking.end_date %></p>
+        </div>
+
+        <div class="card-lower-content">
+          <p>Income: $<%= inbooking.total_price %></p>
+          <% if inbooking.status? %>
+          <p style="color: #00ff59;"><i class="fas fa-lock-open"></i> PAYMENT RECEIVED</p>
+          <% else %>
+          <p style="color: red;"><i class="fas fa-lock"></i> PAYMENT NOT RECEIVED</p>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+
+
+
+
+
+  <div class="cards-krypton-booking">
+    <h4 id="tags-bookings"><i class="fas fa-arrow-down"></i> BOOKINGS</h4>
+    <% @bookings.each do |booking| %>
+    <div class="card-krypton-booking">
+
+      <div class="card-krypton-booking-img">
+        <%= cl_image_tag booking.superhero.photo %>
+        <h1><%= (booking.superhero.name).upcase %></h1>
+      </div>
+
+      <div class="card-content">
+        <div class="card-upper-content">
+          <p>Start date: <%= booking.start_date %></p>
+          <p>End Date: <%= booking.end_date%></p>
+        </div>
+
+        <div class="card-lower-content">
+          <p>Price: $<%= booking.total_price %></p>
+          <% if booking.status? %>
+          <p style="color: #00ff59;"><i class="fas fa-lock-open"></i> PAYMENT COMFIRMED</p>
+          <% else %>
+          <p style="color: red;"><i class="fas fa-lock"></i> PENDING PAYMENT</p>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+</div>
+

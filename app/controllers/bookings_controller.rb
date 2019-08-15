@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
   def index
     @bookings = current_user.bookings
     @incoming_bookings = current_user.incoming_bookings
+    @user = current_user
   end
 
   def new
@@ -29,6 +30,6 @@ class BookingsController < ApplicationController
   private
 
   def strong_params_booking
-    params.require(:booking).permit(:start_date, :end_date, :superhero_id)
+    params.require(:booking).permit(:start_date, :end_date, :superhero_id, :total_price, :status)
   end
 end

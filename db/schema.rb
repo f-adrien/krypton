@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_15_091559) do
+ActiveRecord::Schema.define(version: 2019_08_15_132229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_08_15_091559) do
     t.integer "total_price"
     t.bigint "user_id"
     t.bigint "superhero_id"
-    t.boolean "status"
+    t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["superhero_id"], name: "index_bookings_on_superhero_id"
