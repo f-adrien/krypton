@@ -1,7 +1,8 @@
  <div class="banner-krypton" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path 'banner-background.jpg' %>)">
 
-  <div class="container">
-    <form class="banner-form">
+
+ <!--  <div class="container"> -->
+<!--     <form class="banner-form">
       <h3 style="font-weight: bold">Book superheroes to stay and do things with.</h3 style="font-weight: bold">
         <div class="form-group">
           <label for="exampleInputEmail1">WHERE</label>
@@ -16,10 +17,30 @@
           <label for="exampleInputPassword1">SUPERPOWERS</label>
           <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" >
         </div>
-        <%= link_to 'BOOK YOUR SUPERHERO', superheros_path, class: 'btn button-krypton' %>
+        <%#= link_to 'BOOK YOUR SUPERHERO', superheros_path, class: 'btn button-krypton' %>
       </div>
-    </form>
+    </form> -->
+<!--   </div>  -->
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <%= form_tag superheros_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            placeholder: "Find a location",
+            class: "form-control"
+          %>
+       <!--    <%#= select_date Date.today, order: [:day, :month, :year], prefix: :start_date, class: "simple_form_input"%>
+          <%#= select_date Date.today, order: [:day, :month, :year], prefix: :end_date, class: "simple_form_input" %> -->
+        <% end %>
+      </div>
+    </div>
   </div>
+
+</div>
+
 
   <div class="container">
     <br>
