@@ -1,11 +1,13 @@
 class SuperherosController < ApplicationController
   before_action :set_superhero, only: [:show]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @superheros = Superhero.all
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new
