@@ -1,6 +1,7 @@
 class Superhero < ApplicationRecord
   POWERS = ["Flying", "Telekinesis", "Super strong", "Water manipulation", "Fire manipulation", "Super intelligence", "Velocity", "Combat skills", "Super elasticity", "Electricity manipulation", "Invisibility", "Super dexterity", "Time travel"]
   belongs_to :user
+  has_many :bookings, dependent: :destroy
   validates :name, presence: true, uniqueness: true
   validates :superpower, inclusion: { in: POWERS }
   mount_uploader :photo, PhotoUploader
