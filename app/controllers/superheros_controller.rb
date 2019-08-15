@@ -1,5 +1,6 @@
 class SuperherosController < ApplicationController
   before_action :set_superhero, only: [:show]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     if params[:location].present?
@@ -16,6 +17,7 @@ class SuperherosController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new
