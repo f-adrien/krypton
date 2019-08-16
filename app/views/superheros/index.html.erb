@@ -7,6 +7,7 @@
       <%= cl_image_tag hero.photo %>
       <div class="card-superhero-content">
         <h5 class="green-color"> <%= hero.name %></h5>
+        <p>Distance from <%= params[:location].capitalize %>: <%= Geocoder::Calculations.distance_between(hero.location, params[:location]).to_i %> kms</p>
         <p>Price per day: <%= hero.price_per_day %> €</p>
         <p> Review: <span class=green-color>★★★★★</span></p>
         <p>Superpower: <%= hero.superpower %></p>
