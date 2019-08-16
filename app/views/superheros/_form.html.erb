@@ -1,0 +1,16 @@
+<div class="container d-flex justify-content-center">
+  <div class = "form-width my-5">
+    <h2>Create your Superhero</h2>
+    <%= simple_form_for [user, superhero] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :location %>
+    <%= f.input :superpower %>
+    <%= f.input :price_per_day %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <div class="button mt-4">
+      <%= f.submit "#{params[:action].upcase} SUPERHERO", class: "button-krypton"%>
+    </div>
+    <% end %>
+  </div>
+</div>
