@@ -5,7 +5,7 @@
       <%= simple_form_for [@user, @superhero] do |f| %>
       <%= f.input :name %>
       <%= f.input :location %>
-      <%= f.input :superpower %>
+      <%= f.input :superpower, collection: ["Flying", "Telekinesis", "Super strong", "Water manipulation", "Fire manipulation", "Super intelligence", "Velocity", "Combat skills", "Super elasticity", "Electricity manipulation", "Invisibility", "Super dexterity", "Time travel"] %>
       <%= f.input :price_per_day %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
