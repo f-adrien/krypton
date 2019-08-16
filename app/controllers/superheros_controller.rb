@@ -4,12 +4,18 @@ class SuperherosController < ApplicationController
 
   def index
     if params[:location].present?
-      @superheros_coordinates = Superhero.geocoded
+      # sql_query = "\
+      # superheros.location ILIKE :location
+      # "
+      # @superheros = Superhero.where(sql_query, location: "%#{params[:location]}%")
+      @superheros = Superhero.near(params[:location], 2000)
+      @superheros_coordinates = @superheros.geocoded
       @markers = @superheros_coordinates.map do |superhero|
         {
           lat: superhero.latitude,
           lng: superhero.longitude
         }
+      # @distance = Geocoder::Calculations.distance_between(@superhero.location, params[:location])
       end
     else
       @superheros = Superhero.all

@@ -13,9 +13,13 @@
 </head>
 <body class="<%= 'new-superhero-bg' if params[:action] == "new" %>">
   <%= render '_shared/navbar-krypton' %>
-  <%= yield %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div class="wrapper">
+    <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+  <div class="push"></div>
+  </div>
   <%= render '_shared/footer-krypton' %>
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>
