@@ -1,24 +1,52 @@
 .h1-show {
   font-weight: bold;
-  font-size: 98px;
-  line-height: 116px;
-  margin-left: 70px;
+  font-size: 80px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 5px 20px;
 }
 
-.show-description {
-  margin-top: 30px;
-  // text-align: center;
-}
 
-.booking-form {
-  background-color: white;
-  padding: 10px;
-  border-radius: 5px;
-  color: black;
-}
+
   // input {
   //   border: black 1px solid;
 .simple_form_input {
   border-radius: 15px !important;
   border: black 1px solid !important;
+}
+
+
+.show-page-flex {
+  display: flex;
+  margin: 100px 30px;
+}
+
+.superhero-info-flex {
+border: 1px solid white;
+width: 50%;
+padding: 30px 40px;
+h5 {
+  margin-top: 30px
+}
+}
+
+.superhero-form-flex {
+  border: 1px solid white;
+  width: 50%;
+  color: black;
+  background-color: white;
+  padding: 30px 40px;
+}
+
+#tag-show-page {
+  border: white 1px solid;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+  background-color: white;
+  color: black;
 }
