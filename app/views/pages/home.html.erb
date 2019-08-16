@@ -25,18 +25,14 @@
     <div class="container">
       <h1>Book your superhero</h1>
       <p></p>
-      <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
-        <input name="utf8" type="hidden" value="&#x2713;" />
         <div class="search-form-control form-group">
           <%= form_tag superheros_path, method: :get do %>
-          <%= text_field_tag :query,
-          params[:query],
+          <%= text_field_tag :location,
+          params[:location],
           placeholder: "Find a location...",
           class: "form-control" %>
+          <%= submit_tag 'Search', class: "btn btn-flat" %>
           <% end %>
-          <button name="button" type="submit" class="btn btn-flat">
-            <i class="fas fa-search"></i> Search
-          </button>
         </div>
       </form>
     </div>
