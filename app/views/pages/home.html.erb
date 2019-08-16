@@ -27,8 +27,8 @@
     <div class="row">
       <div class="col-sm-8 offset-sm-2">
         <%= form_tag superheros_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
+          <%= text_field_tag :location,
+            params[:location],
             placeholder: "Find a location",
             class: "form-control"
           %>
