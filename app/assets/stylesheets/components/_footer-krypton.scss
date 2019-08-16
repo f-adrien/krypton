@@ -3,11 +3,17 @@
   justify-content: space-between;
   padding: 20px 80px;
   background-size: cover;
-  // height: 200px;
+  bottom: 0;
+  width: 100%;
+
   align-items: center;
   h5 {
     font-weight: bold;
   }
+}
+.flexbox-krypton-footer,
+.push {
+  height: 200px;
 }
 
 .left-content-footer {
