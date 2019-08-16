@@ -9,15 +9,23 @@ justify-content: space-between;
 align-items: center;
 margin: 0;
 transition: 0.5s background-color ease;
+z-index: 9999;
   a {
     text-decoration: none;
     color: white;
   }
+  a:hover {
+  color: #00ff59;
+  }
 }
 .navbar-krypton-white {
   background-color: white;
+  z-index: 9999;
   a {
     color: black;
+  }
+  a:hover {
+    color: #00ff59;
   }
 }
 
