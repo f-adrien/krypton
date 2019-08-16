@@ -3,6 +3,8 @@ class BookingsController < ApplicationController
     @bookings = current_user.bookings
     @incoming_bookings = current_user.incoming_bookings
     @user = current_user
+    @superheros = current_user.superheros
+
   end
 
   def new

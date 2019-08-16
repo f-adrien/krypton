@@ -65,9 +65,34 @@
           <% end %>
         </div>
       </div>
-
     </div>
     <% end %>
   </div>
 </div>
+
+<div class="banner-index-bookings">
+  <h1>MY SUPERHEROES</h1>
+</div>
+
+
+
+  <div class="cards-krypton-booking">
+    <% @superheros.each do |hero| %>
+    <div class="card-krypton-booking">
+      <div class="card-krypton-booking-img">
+        <%= cl_image_tag hero.photo %>
+        <h1><%= (hero.name).upcase %></h1>
+      </div>
+      <div class="card-content">
+        <div class="card-upper-content">
+          <p><%= link_to "Edit Superhero", edit_superhero_path(hero), class: "btn button-krypton"%></p>
+          <p><%= link_to "Delete Superhero", superhero_path(hero), method: :delete, data: {confirm: "Are you sure ?"}, class: "btn button-krypton" %></p>
+        </div>
+      </div>
+    </div>
+      <% end %>
+  </div>
+</div>
+
+
 

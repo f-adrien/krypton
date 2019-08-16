@@ -1,5 +1,5 @@
 class SuperherosController < ApplicationController
-  before_action :set_superhero, only: [:show]
+  before_action :set_superhero, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
@@ -33,6 +33,21 @@ class SuperherosController < ApplicationController
       render :new
     end
   end
+
+  def edit
+  end
+
+  def update
+    @superhero.update(superhero_params)
+    redirect_to superhero_path(@superhero)
+  end
+
+  def destroy
+    @superhero.destroy
+    redirect_to bookings_path
+  end
+
+  private
 
   def set_superhero
     @superhero = Superhero.find(params[:id])
