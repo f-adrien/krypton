@@ -1,7 +1,7 @@
  <div class="banner-krypton" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path 'banner-background.jpg' %>)">
 
 
- <!--  <div class="container"> -->
+   <!--  <div class="container"> -->
 <!--     <form class="banner-form">
       <h3 style="font-weight: bold">Book superheroes to stay and do things with.</h3 style="font-weight: bold">
         <div class="form-group">
@@ -20,26 +20,36 @@
         <%#= link_to 'BOOK YOUR SUPERHERO', superheros_path, class: 'btn button-krypton' %>
       </div>
     </form> -->
-<!--   </div>  -->
+    <!--   </div>  -->
 
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 offset-sm-2">
-        <%= form_tag superheros_path, method: :get do %>
-          <%= text_field_tag :location,
-            params[:location],
-            placeholder: "Find a location",
-            class: "form-control"
-          %>
-       <!--    <%#= select_date Date.today, order: [:day, :month, :year], prefix: :start_date, class: "simple_form_input"%>
-          <%#= select_date Date.today, order: [:day, :month, :year], prefix: :end_date, class: "simple_form_input" %> -->
-        <% end %>
-      </div>
+    <div class="container">
+      <h1>Book your superhero</h1>
+      <p></p>
+      <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
+        <input name="utf8" type="hidden" value="&#x2713;" />
+        <div class="search-form-control form-group">
+          <%= form_tag superheros_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          placeholder: "Find a location...",
+          class: "form-control" %>
+          <% end %>
+          <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 
-</div>
+  <div class="card-add-action">
+    <div class="container banner-add-sp">
+      <div>
+        <h1>Earn money by renting your superhero</h1>
+        <a class="button-krypton-ghost" href="#">Add now</a>
+      </div>
+    </div>
+  </div>
 
 
   <div class="container">
