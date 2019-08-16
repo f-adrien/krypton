@@ -24,23 +24,22 @@
 
 
 
-<div class="container">
-  <h1></h1>
-  <p></p>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 offset-sm-2">
-        <%= form_tag superheros_path, method: :get do %>
+  <div class="container mt-6">
+    <h1>Find your superhero</h1>
+    <p></p>
+      <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <div class="search-form-control form-group">
+          <%= form_tag superheros_path, method: :get do %>
           <%= text_field_tag :query,
-            params[:query],
-            placeholder: "Find a location",
-            class: "form-control"
-          %>
-       <!--    <%#= select_date Date.today, order: [:day, :month, :year], prefix: :start_date, class: "simple_form_input"%>
-          <%#= select_date Date.today, order: [:day, :month, :year], prefix: :end_date, class: "simple_form_input" %> -->
-        <% end %>
-      </div>
-    </div>
+          params[:query],
+          placeholder: "Find a location...",
+          class: "form-control" %>
+          <% end %>
+          <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </form>
   </div>
 
 </div>
@@ -48,7 +47,6 @@
 
 
 
-</div>
 
 
   <div class="container">
